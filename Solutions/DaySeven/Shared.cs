@@ -5,9 +5,9 @@ namespace Solutions.DaySeven;
 
 public static class Shared
 {
-    public static IEnumerable<Inode> ParseInput(string input)
+    public static List<Inode> ParseInput(string input, out Inode root)
     {
-        var root = new Inode("/");
+        root = new Inode("/");
         
         var all = new List<Inode>{root};
         var current = root;

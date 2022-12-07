@@ -8,22 +8,34 @@ public class Inode
         Size = size;
         Parent = parent;
     }
-    public Inode? Parent { get; set; }
-    public List<Inode> Children { get; set; } = new();
-    public string Name { get; set; }
-    public int? Size { get; set; }
+    public Inode? Parent { get; }
+    public List<Inode> Children { get; } = new();
+    public string Name { get; }
+    private int? Size { get; }
     
     public InodeType InodeType => Size.HasValue ? InodeType.File : InodeType.Directory;
 
+    private int? _cachedSize;
+
     public int GetDirectorySize()
     {
+        if (_cachedSize.HasValue)
+        {
+            return _cachedSize.Value;
+        }
+        
         if (InodeType == InodeType.File)
         {
             throw new Exception("Can not calculate directory size on a file");
         }
 
-        var total = Children.Where(e => e.InodeType == InodeType.File).Select(e => e.Size ?? throw new Exception("File has no size")).Sum();
-        total += Children.Where(e => e.InodeType == InodeType.Directory).Select(e => e.GetDirectorySize()).Sum();
+        var total = Children.Where(e => e.InodeType == InodeType.File)
+            .Select(e => e.Size ?? throw new Exception("File has no size"))
+            .Sum();
+        total += Children.Where(e => e.InodeType == InodeType.Directory)
+            .Select(e => e.GetDirectorySize())
+            .Sum();
+        _cachedSize = total;
         return total;
     }
 }
