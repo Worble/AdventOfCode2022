@@ -5,17 +5,17 @@ namespace Tests.DayThree;
 
 public class PartOneTestsData : IEnumerable<object[]>
 {
-    public IEnumerator<object[]> GetEnumerator()
-    {
-        yield return new object[] {"vJrwpWtwJgWrhcsFMMfFFhFp", 16};
-        yield return new object[] {"jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", 38};
-        yield return new object[] {"PmmdzqPrVvPwwTWBwg", 42};
-        yield return new object[] {"wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn", 22};
-        yield return new object[] {"ttgJtRGJQctTZtZT", 20};
-        yield return new object[] {"CrZsJsPPZsGzwwsLwLmpwMDw", 19};
-        yield return new object[]
-        {
-            @"JppMDcJPcQbqGqFb
+	public IEnumerator<object[]> GetEnumerator()
+	{
+		yield return new object[] {"vJrwpWtwJgWrhcsFMMfFFhFp", 16};
+		yield return new object[] {"jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", 38};
+		yield return new object[] {"PmmdzqPrVvPwwTWBwg", 42};
+		yield return new object[] {"wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn", 22};
+		yield return new object[] {"ttgJtRGJQctTZtZT", 20};
+		yield return new object[] {"CrZsJsPPZsGzwwsLwLmpwMDw", 19};
+		yield return new object[]
+		{
+			@"JppMDcJPcQbqGqFb
 ZStgnHtsSjGBhqFbBmsm
 djzzwgHHggdnfwjtMPDPMGpPlNfpLDll
 dRCtwtlCSttPtlNPNtgvPrDqmBsjGSpjBBsJsqqmrp
@@ -315,12 +315,12 @@ nJnczsHzNMmBJnbnbNwnfzJfcDTltllRTgPlFlgPrTDjPRGl
 ZLCGDvvJlvGChSPZWPSsZWdRRN
 rQccBwcccnHmQggnVLPLWpgVWPpWzSRs
 fmwTfTHnMBTfJDbfftJLvhlL",
-            7446
-        };
-    }
+			7446
+		};
+	}
 
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
+	IEnumerator IEnumerable.GetEnumerator()
+	{
+		return GetEnumerator();
+	}
 }

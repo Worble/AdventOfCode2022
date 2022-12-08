@@ -5,11 +5,11 @@ namespace Tests.DayOne;
 
 public class PartTwoTestsData : IEnumerable<object[]>
 {
-    public IEnumerator<object[]> GetEnumerator()
-    {
-        yield return new object[]
-        {
-            @"1000
+	public IEnumerator<object[]> GetEnumerator()
+	{
+		yield return new object[]
+		{
+			@"1000
         2000
         3000
         
@@ -23,11 +23,11 @@ public class PartTwoTestsData : IEnumerable<object[]>
         9000
         
         10000",
-            45000
-        };
-        yield return new object[]
-        {
-            @"9524
+			45000
+		};
+		yield return new object[]
+		{
+			@"9524
         12618
         6755
         2121
@@ -2281,12 +2281,12 @@ public class PartTwoTestsData : IEnumerable<object[]>
         5630
         5721
         6630",
-            213958
-        };
-    }
+			213958
+		};
+	}
 
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
+	IEnumerator IEnumerable.GetEnumerator()
+	{
+		return GetEnumerator();
+	}
 }

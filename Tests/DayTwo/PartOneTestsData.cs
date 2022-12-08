@@ -5,18 +5,18 @@ namespace Tests.DayTwo;
 
 public class PartOneTestsData : IEnumerable<object[]>
 {
-    public IEnumerator<object[]> GetEnumerator()
-    {
-        yield return new object[]
-        {
-            @"A Y
+	public IEnumerator<object[]> GetEnumerator()
+	{
+		yield return new object[]
+		{
+			@"A Y
 B X
 C Z",
-            15
-        };
-        yield return new object[]
-        {
-            @"C X
+			15
+		};
+		yield return new object[]
+		{
+			@"C X
 A Y
 C Z
 B Y
@@ -2516,12 +2516,12 @@ B Y
 C Y
 A Z
 A Y",
-            12679
-        };
-    }
+			12679
+		};
+	}
 
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
+	IEnumerator IEnumerable.GetEnumerator()
+	{
+		return GetEnumerator();
+	}
 }

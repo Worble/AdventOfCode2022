@@ -5,11 +5,11 @@ namespace Tests.DayFive;
 
 public class PartTwoTestsData : IEnumerable<object[]>
 {
-    public IEnumerator<object[]> GetEnumerator()
-    {
-        yield return new object[]
-        {
-            @"    [D]    
+	public IEnumerator<object[]> GetEnumerator()
+	{
+		yield return new object[]
+		{
+			@"    [D]    
 [N] [C]    
 [Z] [M] [P]
  1   2   3 
@@ -18,11 +18,11 @@ move 1 from 2 to 1
 move 3 from 1 to 3
 move 2 from 2 to 1
 move 1 from 1 to 2",
-            "MCD"
-        };
-        yield return new object[]
-        {
-            @"[Q]         [N]             [N]    
+			"MCD"
+		};
+		yield return new object[]
+		{
+			@"[Q]         [N]             [N]    
 [H]     [B] [D]             [S] [M]
 [C]     [Q] [J]         [V] [Q] [D]
 [T]     [S] [Z] [F]     [J] [J] [W]
@@ -536,12 +536,12 @@ move 17 from 5 to 1
 move 14 from 1 to 2
 move 7 from 2 to 4
 move 5 from 2 to 6",
-            "CJVLJQPHS"
-        };
-    }
+			"CJVLJQPHS"
+		};
+	}
 
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
+	IEnumerator IEnumerable.GetEnumerator()
+	{
+		return GetEnumerator();
+	}
 }

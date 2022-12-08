@@ -5,23 +5,23 @@ namespace Tests.DayFour;
 
 public class PartTwoTestsData : IEnumerable<object[]>
 {
-    public IEnumerator<object[]> GetEnumerator()
-    {
-        yield return new object[] {"2-4,6-8", 0};
-        yield return new object[] {"5-7,7-9", 1};
-        yield return new object[]
-        {
-            @"2-4,6-8
+	public IEnumerator<object[]> GetEnumerator()
+	{
+		yield return new object[] {"2-4,6-8", 0};
+		yield return new object[] {"5-7,7-9", 1};
+		yield return new object[]
+		{
+			@"2-4,6-8
 2-3,4-5
 5-7,7-9
 2-8,3-7
 6-6,4-6
 2-6,4-8",
-            4
-        };
-        yield return new object[]
-        {
-            @"1-2,2-96
+			4
+		};
+		yield return new object[]
+		{
+			@"1-2,2-96
 17-75,14-75
 33-92,93-93
 18-18,18-83
@@ -1021,12 +1021,12 @@ public class PartTwoTestsData : IEnumerable<object[]>
 5-88,5-5
 78-96,79-81
 8-9,7-8",
-            900
-        };
-    }
+			900
+		};
+	}
 
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
+	IEnumerator IEnumerable.GetEnumerator()
+	{
+		return GetEnumerator();
+	}
 }

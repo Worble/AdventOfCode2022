@@ -6,10 +6,10 @@ namespace Tests.DayTwo;
 
 public class PartTwpTests
 {
-    [Theory]
-    [ClassData(typeof(PartTwoTestsData))]
-    public void GetScore(string input, int expected)
-    {
-        PartTwo.GetScore(input).Should().Be(expected);
-    }
+	[Theory]
+	[ClassData(typeof(PartTwoTestsData))]
+	public void GetScore(string input, int expected)
+	{
+		PartTwo.GetScore(input).Should().Be(expected);
+	}
 }

@@ -1,8 +1,8 @@
 using FluentAssertions;
-using Solutions.DayFour;
+using Solutions.DayEight;
 using Xunit;
 
-namespace Tests.DayFour;
+namespace Tests.DayEight;
 
 public class PartTwoTests
 {
@@ -10,6 +10,6 @@ public class PartTwoTests
 	[ClassData(typeof(PartTwoTestsData))]
 	public void DuplicateAssignments(string input, int expected)
 	{
-		PartTwo.DuplicateAssignments(input).Should().Be(expected);
+		PartTwo.ScenicScore(input).Should().Be(expected);
 	}
 }

@@ -5,11 +5,11 @@ namespace Tests.DaySeven;
 
 public class PartTwoTestsData : IEnumerable<object[]>
 {
-    public IEnumerator<object[]> GetEnumerator()
-    {
-        yield return new object[]
-        {
-            @"$ cd /
+	public IEnumerator<object[]> GetEnumerator()
+	{
+		yield return new object[]
+		{
+			@"$ cd /
 $ ls
 dir a
 14848514 b.txt
@@ -32,11 +32,11 @@ $ ls
 8033020 d.log
 5626152 d.ext
 7214296 k",
-            24933642
-        };
-        yield return new object[]
-        {
-            @"$ cd /
+			24933642
+		};
+		yield return new object[]
+		{
+			@"$ cd /
 $ ls
 dir fchrtcbh
 dir hlnbrj
@@ -1067,12 +1067,12 @@ $ cd ..
 $ cd hrw
 $ ls
 260983 wfp.lgp",
-            8679207
-        };
-    }
+			8679207
+		};
+	}
 
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
+	IEnumerator IEnumerable.GetEnumerator()
+	{
+		return GetEnumerator();
+	}
 }

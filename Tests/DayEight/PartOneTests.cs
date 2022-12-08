@@ -1,8 +1,8 @@
 using FluentAssertions;
-using Solutions.DayFour;
+using Solutions.DayEight;
 using Xunit;
 
-namespace Tests.DayFour;
+namespace Tests.DayEight;
 
 public class PartOneTests
 {
@@ -10,6 +10,6 @@ public class PartOneTests
 	[ClassData(typeof(PartOneTestsData))]
 	public void DuplicateAssignments(string input, int expected)
 	{
-		PartOne.DuplicateAssignments(input).Should().Be(expected);
+		PartOne.VisibleTrees(input).Should().Be(expected);
 	}
 }
