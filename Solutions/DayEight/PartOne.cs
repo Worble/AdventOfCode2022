@@ -27,7 +27,7 @@ public static class PartOne
 			}
 
 			return trees.All(e => e.ToInt() < currentTree);
-		},
+		}
 	};
 
 	public static int VisibleTrees(string input)

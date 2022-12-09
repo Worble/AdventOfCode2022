@@ -22,7 +22,8 @@ public static class PartTwo
 			return score;
 		},
 		// right
-		(lines, currentTree, y, x) =>{
+		(lines, currentTree, y, x) =>
+		{
 			var score = 0;
 			for (var x2 = x + 1; x2 < lines.Count; x2++)
 			{
@@ -64,9 +65,9 @@ public static class PartTwo
 			}
 
 			return score;
-		},
+		}
 	};
-	
+
 	public static int ScenicScore(string input)
 	{
 		var lines = input.SplitNewlines().ToList();
