@@ -10,7 +10,7 @@ public static class PartOne
 			.Chunk(6)
 			.Select(e => new Monkey(e))
 			.ToList();
-		
+
 		for (var round = 0; round < 20; round++)
 		{
 			foreach (var monkey in monkeys)

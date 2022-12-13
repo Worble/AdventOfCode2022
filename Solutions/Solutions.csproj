@@ -6,4 +6,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <Reference Include="FluentAssertions">
+            <HintPath>..\..\..\..\.nuget\packages\fluentassertions\6.8.0\lib\net6.0\FluentAssertions.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
 </Project>
