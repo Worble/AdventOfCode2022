@@ -26,7 +26,7 @@ public static class PartTwo
 		var test = Shared.Bfs(root ?? throw new Exception(),
 			nodes,
 			currentHeight => currentHeight is 'a' or 'S',
-			(adjacentHeight, currentHeight) => adjacentHeight +1 >= currentHeight);
+			(adjacentHeight, currentHeight) => adjacentHeight + 1 >= currentHeight);
 		return test.Steps;
 	}
 }

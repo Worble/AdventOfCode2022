@@ -15,6 +15,6 @@ public static class PartTwo
 		};
 		packets.Sort();
 		packets.Reverse();
-		return (packets.FindIndex(e => e.Value == "[[2]]")+1) * (packets.FindIndex(e => e.Value == "[[6]]")+1);
+		return (packets.FindIndex(e => e.Value == "[[2]]") + 1) * (packets.FindIndex(e => e.Value == "[[6]]") + 1);
 	}
 }

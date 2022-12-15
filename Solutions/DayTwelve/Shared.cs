@@ -21,7 +21,7 @@ public class Shared
 				'E' => 'z',
 				_ => current.Height
 			};
-			
+
 			var adjacentNodes = current.GetAdjacent(nodes).Where(
 				e =>
 				{

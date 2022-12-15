@@ -7,7 +7,9 @@ public class PartOneTestsData : IEnumerable<object[]>
 {
 	public IEnumerator<object[]> GetEnumerator()
 	{
-		yield return new object[] {@"[1,1,3,1,1]
+		yield return new object[]
+		{
+			@"[1,1,3,1,1]
 [1,1,5,1,1]
 
 [[1],[2,3,4]]
@@ -29,7 +31,9 @@ public class PartOneTestsData : IEnumerable<object[]>
 [[]]
 
 [1,[2,[3,[4,[5,6,7]]]],8,9]
-[1,[2,[3,[4,[5,6,0]]]],8,9]", 13};
+[1,[2,[3,[4,[5,6,0]]]],8,9]",
+			13
+		};
 
 		yield return new object[]
 		{
@@ -37,7 +41,7 @@ public class PartOneTestsData : IEnumerable<object[]>
 [3,[],[[],2,[9,2,5,5],7],6]",
 			0
 		};
-		
+
 		yield return new object[]
 		{
 			@"[[[7,8],5],[[9,[8,7,8],[],[2,4,10,10],[2,10,8,3,3]],[],[[6,1,10],[],3,6],[3]],[],[4],[3,0,1,10]]

@@ -9,7 +9,7 @@ public struct Packet : IComparable
 		Type = PacketType.Int;
 		Value = string.Empty;
 	}
-	
+
 	public Packet(PacketType type, string value)
 	{
 		Type = type;
@@ -19,67 +19,6 @@ public struct Packet : IComparable
 	private PacketType Type { get; set; }
 	public string Value { get; set; }
 	private int IntValue => string.IsNullOrWhiteSpace(Value) ? 0 : int.Parse(Value);
-	
-	/// <summary>
-	/// Assumes the current Packet is left
-	/// </summary>
-	/// <returns>True if inputs are in the right order</returns>
-	// public ComparisonResult Compare(Packet other)
-	// {
-	// 	switch (Type)
-	// 	{
-	// 		case PacketType.Int when other.Type == PacketType.Int:
-	// 		{
-	// 			if (IntValue < other.IntValue)
-	// 			{
-	// 				return ComparisonResult.Correct;
-	// 			}
-	//
-	// 			return IntValue > other.IntValue 
-	// 				? ComparisonResult.Incorrect 
-	// 				: ComparisonResult.Inconclusive;
-	// 		}
-	// 		case PacketType.Array when other.Type == PacketType.Int:
-	// 			other.ConvertToArray();
-	// 			break;
-	// 		case PacketType.Int when other.Type == PacketType.Array:
-	// 			ConvertToArray();
-	// 			break;
-	// 	}
-	//
-	// 	if (Type != PacketType.Array || other.Type != PacketType.Array)
-	// 	{
-	// 		throw new Exception("Unreachable code");
-	// 	}
-	//
-	// 	var thisValues = GetValues(Value).ToList();
-	// 	var rightValues = GetValues(other.Value).ToList();
-	// 	for (var i = 0; i < thisValues.Count; i++)
-	// 	{
-	// 		if (i >= rightValues.Count)
-	// 		{
-	// 			return ComparisonResult.Incorrect;
-	// 		}
-	//
-	// 		var x = thisValues[i];
-	// 		var y = rightValues[i];
-	// 		switch (x.Compare(y))
-	// 		{
-	// 			case ComparisonResult.Incorrect:
-	// 				return ComparisonResult.Incorrect;
-	// 			case ComparisonResult.Correct:
-	// 				return ComparisonResult.Correct;
-	// 			case ComparisonResult.Inconclusive:
-	// 				continue;
-	// 			default:
-	// 				throw new Exception("Unknown comparison result");
-	// 		}
-	// 	}
-	//
-	// 	return thisValues.Count < rightValues.Count 
-	// 		? ComparisonResult.Correct 
-	// 		: ComparisonResult.Inconclusive;
-	// }
 
 	private void ConvertToArray()
 	{
@@ -97,7 +36,7 @@ public struct Packet : IComparable
 		var sb = new StringBuilder();
 		var brackets = 0;
 		var current = new Packet();
-		for (var i = 1; i < input.Length-1; i++)
+		for (var i = 1; i < input.Length - 1; i++)
 		{
 			var c = input[i];
 
@@ -138,10 +77,10 @@ public struct Packet : IComparable
 			}
 			else
 			{
-
 				brackets--;
 			}
 		}
+
 		if (sb.Length > 0)
 		{
 			yield return new Packet(current.Type, sb.ToString());
@@ -160,7 +99,7 @@ public struct Packet : IComparable
 					return 1;
 				}
 
-				return IntValue > other.IntValue 
+				return IntValue > other.IntValue
 					? -1
 					: 0;
 			}
